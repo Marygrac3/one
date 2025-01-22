@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=PlaywriteIndia=swap');
+:root  {
+    --main-color: #FFCCEA; /* Updated main color */
+    --dark-main: #CDC1FF; /* Updated dark main color */
+    --black: #13131a;
+    --bg: #BFECFF; /* Updated background color */
+}
+
+/* Apply Pastel Blue background to the entire page */
+body {
+    background-color: #BFECFF; /* Pastel Cream Background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header.header {
+    background-color: #CDC1FF;  /* Soft purple background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remove color from the menu tab on hover and active states */
+.navbar a:hover,
+.navbar .active {
+    background-color: transparent !important; /* Remove background color */
+    color: #333 !important; /* Ensure text color remains dark */
+    border: none !important; /* Remove any border */
+}
+
+
+/* Logo */
+.header .logo img {
+    width: 120px; /* Logo size */
+    height: auto;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar .active {
+    background-color: #CDC1FF;  /* Light purple color */
+    color: white;
+}
+
+/* Cart Icon */
+.cart-container a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Navbar Links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.navbar a:hover, .navbar .active {
+    color: #FFF6E3;
+    background-color: #CDC1FF;
+    border-radius: 5px;
+    transform: scale(1.05); /* cover the whole page only */
+}
+
+/* Navbar Check Button (For mobile) */
+#check {
+    display: none;
+}
+
+/* Mobile Hamburger Menu Icon */
+.check-btn {
+    display: none;
+    font-size: 2.5em;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+/* When the menu is toggled, show the navbar */
+#check:checked ~ .navbar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #BFECFF;
+    padding: 10px 0;
+    gap: 15px;
+}
+
+#check:checked ~ .navbar a {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+/* Menu Section Styling */
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.menu-box {
+    width: 300px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid #CDC1FF; /* Added border to product box */
+}
+
+.menu-img {
+    padding: 15px;
+    border: 5px solid #f0f0f0;
+    border-radius: 15px;
+    background: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+.menu-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-img:hover {
+    transform: scale(1.05);
+    border-color: #CDC1FF;
+}
+
+.menu-content {
+    padding: 20px;
+    background: #ffffff;
+    color: #333;
+}
+
+.menu-content h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.menu-content p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.menu-content button {
+    background-color: #BFECFF; /* Button Color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-content button:hover {
+    background-color: #CDC1FF; /* Button Hover Color */
+    transform: translateY(-2px);
+}
+
+.menu-content span {
+    font-weight: bold;
+    color: #9E91FF; /* Darker version of the border color for price */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-box {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-box h3 {
+    color: #FFCCEA;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.footer-box p {
+    color: #ccc;
+}
+
+.footer-box a {
+    color: #FFCCEA;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-box a:hover {
+    color: #ffffff;
+}
+
+.icons a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #FFCCEA;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #2c3e50; /* Dark grey-blue background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #FFCCEA; /* Soft pinkish hue for the heading */
+}
+
+.footer p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.footer .footer-loc a {
+    color: #BDC3C7; /* Light grey color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-loc a:hover {
+    color: #FFCCEA; /* Hover effect color */
+}
+
+.footer form {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #BDC3C7;
+    width: 250px;
+    margin-right: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+.footer input[type="email"]:focus {
+    border-color: #FFCCEA;
+    outline: none;
+}
+
+.footer button {
+    background-color: #FFCCEA; /* Soft pink button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer button i {
+    font-size: 1.2em;
+}
+
+.footer button:hover {
+    background-color: #E74C3C; /* Red hover effect for the button */
+}
+
+.footer .icons a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer .icons a:hover {
+    color: #FFCCEA; /* Hover effect color */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
